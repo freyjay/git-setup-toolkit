@@ -44,14 +44,14 @@ When creating projects manually (without the automation app), developers often f
 ### **Installation**
 ```bash
 cd /Users/francisrey/Developer
-git clone https://github.com/freyjay/francis-dev-setup.git
-chmod +x francis-dev-setup/setup-project-v2.sh
+git clone https://github.com/freyjay/git-setup-toolkit.git
+chmod +x git-setup-toolkit/setup-project-v2.sh
 ```
 
 ### **Usage**
 ```bash
 # Create new project with hybrid setup
-./francis-dev-setup/setup-project-v2.sh my-awesome-project
+./git-setup-toolkit/setup-project-v2.sh my-awesome-project
 
 # Follow the clear next steps provided
 # Core setup always completes successfully!
@@ -129,11 +129,21 @@ francis-dev-setup/
 - **Remote Pattern:** `git@github-personal:freyjay/[project-name].git`
 
 ### **Integration with Existing System**
-This tool works alongside your existing automation:
+This tool works alongside your existing automation as **complementary utilities**:
 
-1. **Primary:** Use [Project Setup Automation](https://github.com/freyjay/ai-project-setup) app
-2. **Fallback:** Use this script when manual creation is needed
-3. **Recovery:** Fix broken projects with reliable re-initialization
+**🔗 Complementary Project:** [ai-project-setup](https://github.com/freyjay/ai-project-setup)
+
+| Tool | Primary Use | Reliability | Speed | Recovery |
+|------|------------|-------------|-------|----------|
+| **ai-project-setup** | GUI automation, full templates | High (GUI-based) | Medium | Not designed for |
+| **git-setup-toolkit** | CLI fallback, core git setup | ~100% (hybrid approach) | Fast | Excellent |
+
+**Workflow Integration:**
+1. **Primary:** Use ai-project-setup for comprehensive new projects
+2. **Fallback:** Use git-setup-toolkit for quick/manual setup
+3. **Recovery:** Use git-setup-toolkit to fix broken configurations
+
+**File System Compatibility:** Both create identical git configurations with same user.name, user.email, SSH remote URL format, and allowed repositories management.
 
 ### **File Modifications**
 - **Updates:** `/Users/francisrey/Developer/.git-accounts` (adds project to allowed list)
